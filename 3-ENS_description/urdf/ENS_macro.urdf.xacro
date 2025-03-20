@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<robot name="ENS" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:macro name="ENS" params="prefix">
+
+<xacro:include filename="$(find ENS_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find ENS_description)/urdf/ENS.trans" />
+<xacro:include filename="$(find ENS_description)/urdf/ENS.gazebo" />
+<link name="${prefix}base_link"/>
+
+<link name="${prefix}old_component">
+  <inertial>
+    <origin xyz="0.05500044028664272 0.0005009439181346137 -0.08765526806590855" rpy="0 0 0"/>
+    <mass value="0.10971111502632125"/>
+    <inertia ixx="0.000365" iyy="0.000475" izz="0.00011" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ENS_description/meshes/old_component.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="ENS_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ENS_description/meshes/old_component.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}old_component">
+  <inertial>
+    <origin xyz="-0.054999559713357266 0.0005009439181346137 -0.08765526806590855" rpy="0 0 0"/>
+    <mass value="0.10971111502632125"/>
+    <inertia ixx="0.000365" iyy="0.000475" izz="0.00011" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ENS_description/meshes/old_component.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="ENS_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ENS_description/meshes/old_component.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}old_component">
+  <inertial>
+    <origin xyz="-0.054999559713357266 0.0005009439181346137 0.062344731934091444" rpy="0 0 0"/>
+    <mass value="0.10971111502632125"/>
+    <inertia ixx="0.000365" iyy="0.000475" izz="0.00011" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ENS_description/meshes/old_component.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="ENS_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ENS_description/meshes/old_component.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}old_component">
+  <inertial>
+    <origin xyz="0.05500044028664272 0.0005009439181346137 0.062344731934091444" rpy="0 0 0"/>
+    <mass value="0.10971111502632125"/>
+    <inertia ixx="0.000365" iyy="0.000475" izz="0.00011" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ENS_description/meshes/old_component.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="ENS_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ENS_description/meshes/old_component.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="${prefix}Révolution 1" type="continuous">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}old_component"/>
+  <child link="${prefix}old_component"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="${prefix}Révolution 2" type="continuous">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}old_component"/>
+  <child link="${prefix}old_component"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="${prefix}Révolution 3" type="continuous">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}old_component"/>
+  <child link="${prefix}old_component"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="${prefix}Révolution 4" type="continuous">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}old_component"/>
+  <child link="${prefix}old_component"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+</xacro:macro>
+</robot>

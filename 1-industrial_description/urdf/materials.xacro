@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<robot name="industrial" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="industrial_silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<material name="industrial_color0">
+  <color rgba="0.349 0.349 0.349 1.0"/>
+</material>
+
+</robot>

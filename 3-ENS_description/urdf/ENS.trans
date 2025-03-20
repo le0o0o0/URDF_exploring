@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="ENS" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="${prefix}Révolution 1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Révolution 1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Révolution 1_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="${prefix}Révolution 2_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Révolution 2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Révolution 2_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="${prefix}Révolution 3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Révolution 3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Révolution 3_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="${prefix}Révolution 4_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Révolution 4">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Révolution 4_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
