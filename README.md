@@ -19,7 +19,7 @@ Our project requires a working Fusion360 to URDF Plugin installed from https://g
 First Download the files 
 Place the fusion2urdf-ros2 in in your ros2_ws
 
-Go in your Ros2 
+Go in your Ros2 workspace
 ```bash
 cd ~/model_ws/
 colcon build
